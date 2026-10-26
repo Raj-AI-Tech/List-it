@@ -6,7 +6,10 @@
     "sdkVersion": "57.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "splash": {
       "backgroundColor": "#E4DCFA"
     },
@@ -18,6 +21,11 @@
     },
     "ios": {
       "supportsTablet": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "14504d6e-0ae1-4411-b2dd-4f768deca296"
+      }
     }
   }
 }
