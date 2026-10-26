@@ -6,17 +6,21 @@
     "sdkVersion": "57.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
+    "icon": "./assets/icon.png",
     "platforms": [
       "ios",
       "android"
     ],
     "splash": {
-      "backgroundColor": "#E4DCFA"
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#DDD6FE"
     },
     "android": {
       "package": "com.listit.app",
       "adaptiveIcon": {
-        "backgroundColor": "#E4DCFA"
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#DDD6FE"
       }
     },
     "ios": {
