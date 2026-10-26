@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <rect width="128" height="128" rx="32" fill="#DDD6FE"/>
+  <rect x="18" y="18" width="92" height="92" rx="22" fill="#FFFFFF" stroke="#18181B" stroke-width="6"/>
+  <rect x="22" y="22" width="92" height="92" rx="22" fill="#18181B" opacity="0.12" transform="translate(4,4)"/>
+  
+  <!-- Checkbox pill -->
+  <rect x="30" y="32" width="22" height="22" rx="7" fill="#A7F3D0" stroke="#18181B" stroke-width="4"/>
+  <path d="M34 43 L39 48 L48 37" fill="none" stroke="#18181B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Line 1 -->
+  <rect x="58" y="38" width="40" height="8" rx="4" fill="#18181B"/>
+  
+  <!-- Checkbox pill 2 -->
+  <rect x="30" y="64" width="22" height="22" rx="7" fill="#FEF08A" stroke="#18181B" stroke-width="4"/>
+  <path d="M34 75 L39 80 L48 69" fill="none" stroke="#18181B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Line 2 -->
+  <rect x="58" y="70" width="44" height="8" rx="4" fill="#18181B"/>
+</svg>

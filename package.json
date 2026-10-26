@@ -1,0 +1,38 @@
+{
+  "name": "list-it",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "main": "App.js",
+  "scripts": {
+    "start": "expo start",
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@expo/cli": "57.0.32",
+    "canvas-confetti": "^1.9.4",
+    "expo": "57.0.31",
+    "expo-status-bar": "~57.0.1",
+    "lucide-react": "^1.61.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-web": "~0.21.0",
+    "react-native-webview": "13.16.1",
+    "zustand": "^5.0.16"
+  },
+  "devDependencies": {
+    "@types/canvas-confetti": "^1.9.0",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "oxlint": "^1.88.0",
+    "typescript": "~5.6.3",
+    "vite": "^5.4.11"
+  }
+}

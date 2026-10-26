@@ -1,0 +1,320 @@
+/* ==========================================================================
+   LIST IT — Playful Pastel & Neo-Brutalist Design System
+   ========================================================================== */
+
+:root {
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+
+  /* Pastel Theme Tokens */
+  --bg-lavender: #E4DCFA;
+  --bg-lavender-subtle: #EDE8FC;
+  --bg-lavender-dark: #C4B5FD;
+  
+  --color-mint: #A7F3D0;
+  --color-mint-light: #D1FAE5;
+  --color-mint-subtle: #ECFDF5;
+  --color-mint-text: #064E3B;
+
+  --color-yellow: #FEF08A;
+  --color-yellow-light: #FEF9C3;
+  --color-yellow-subtle: #FEFCE8;
+  --color-yellow-text: #713F12;
+
+  --color-peach: #FED7AA;
+  --color-peach-light: #FFEDD5;
+  --color-peach-subtle: #FFF7ED;
+  --color-peach-text: #7C2D12;
+
+  --color-pink: #FBCFE8;
+  --color-pink-light: #FCE7F3;
+  --color-pink-subtle: #FDF2F8;
+  --color-pink-text: #831843;
+
+  --color-blue: #BAE6FD;
+  --color-blue-light: #E0F2FE;
+  --color-blue-subtle: #F0F9FF;
+  --color-blue-text: #0C4A6E;
+
+  --color-purple: #DDD6FE;
+  --color-purple-light: #EDE9FE;
+  --color-purple-subtle: #F5F3FF;
+  --color-purple-text: #4C1D95;
+
+  /* Surfaces & Ink */
+  --surface-card: #FFFFFF;
+  --surface-subtle: #F8FAFC;
+  --surface-overlay: rgba(24, 24, 27, 0.45);
+
+  --ink-primary: #18181B;
+  --ink-secondary: #52525B;
+  --ink-muted: #71717A;
+  --ink-light: #A1A1AA;
+
+  /* Outlines & Refined Neo-brutalist Shadows */
+  --border-thick: 1.5px solid #18181B;
+  --border-medium: 1.5px solid #18181B;
+  --border-subtle: 1px solid rgba(24, 24, 27, 0.12);
+
+  --shadow-sm: 1.5px 1.5px 0px #18181B;
+  --shadow-md: 2px 2px 0px #18181B;
+  --shadow-lg: 3px 3px 0px #18181B;
+  --shadow-xl: 4px 4px 0px #18181B;
+  --shadow-soft: 0 8px 20px -4px rgba(0, 0, 0, 0.06);
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 26px;
+  --radius-full: 9999px;
+
+  /* Animation Timings */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+
+/* Global Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-main);
+  background-color: #D8CEF6;
+  color: var(--ink-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  user-select: none;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Friendly Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--ink-primary);
+  line-height: 1.25;
+}
+
+button {
+  font-family: var(--font-main);
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input, textarea, select {
+  font-family: var(--font-main);
+  outline: none;
+  border: none;
+}
+
+/* Subtle Grid Background Pattern (Reference Screen Middle) */
+.grid-bg-pattern {
+  background-color: var(--bg-lavender);
+  background-image: 
+    linear-gradient(to right, rgba(24, 24, 27, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(24, 24, 27, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+
+/* Tactile Neo-Brutalist Buttons */
+.neo-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: var(--radius-full);
+  border: var(--border-medium);
+  box-shadow: var(--shadow-md);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--ink-primary);
+  background-color: var(--color-yellow);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.neo-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: var(--shadow-lg);
+}
+
+.neo-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #18181B;
+}
+
+.neo-btn-mint {
+  background-color: var(--color-mint);
+}
+
+.neo-btn-lavender {
+  background-color: var(--color-purple);
+}
+
+.neo-btn-white {
+  background-color: var(--surface-card);
+}
+
+.neo-btn-black {
+  background-color: var(--ink-primary);
+  color: #FFFFFF;
+}
+
+/* Neo-Brutalist Card Primitive */
+.neo-card {
+  background-color: var(--surface-card);
+  border-radius: var(--radius-lg);
+  border: var(--border-medium);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.neo-card-interactive {
+  cursor: pointer;
+}
+
+.neo-card-interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.neo-card-interactive:active {
+  transform: translate(1px, 1px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Pill Badges */
+.neo-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  border: var(--border-medium);
+  font-weight: 700;
+  font-size: 13px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Modern Checkbox */
+.neo-checkbox {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  border: var(--border-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  box-shadow: 1.5px 1.5px 0px #18181B;
+  transition: all var(--transition-bounce);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.neo-checkbox.checked {
+  background-color: var(--color-mint);
+  transform: scale(0.96);
+}
+
+/* Progress Bar */
+.neo-progress-track {
+  width: 100%;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background-color: rgba(24, 24, 27, 0.08);
+  border: 1.5px solid #18181B;
+  overflow: hidden;
+  position: relative;
+}
+
+.neo-progress-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background-color: var(--color-mint);
+  transition: width 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(24, 24, 27, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(24, 24, 27, 0.35);
+}
+
+/* Smooth Fade / Slide Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes popScale {
+  0% { transform: scale(0.92); opacity: 0; }
+  60% { transform: scale(1.03); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-pop {
+  animation: popScale 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Radar pulse animation for the device signal circle from reference */
+@keyframes radarPulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.radar-pulse {
+  animation: radarPulse 3s ease-in-out infinite;
+}
